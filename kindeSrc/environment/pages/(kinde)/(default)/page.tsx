@@ -17,7 +17,7 @@ const DefaultPage: React.FC<KindePageEvent> = async ({ context, request }) => {
   );
 };
 
-export default async function Page(event: KindePageEvent) {
+export default async function Page(event: KindePageEvent): Promise<string> {
   const page = await DefaultPage(event);
   return renderToString(page);
 }
